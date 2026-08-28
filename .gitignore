@@ -14,6 +14,9 @@
 现场/
 save_img_file/
 
+# 遗留算法草稿（不上传）
+MetalStripVision/左侧测量*.cpp
+
 # 训练好的模型权重（商业资产，不入库）
 MetalStripVision/Model/Trt/*.trt
 *.trt
