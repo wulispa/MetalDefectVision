@@ -153,6 +153,10 @@ MetalStripVision/
 - `include/` 下的 opencv、modbus、halcon、yolo_api 等第三方头文件与 DLL(海康 SDK 等)版权归原厂所有,仅为本工程编译所需
 - 缺陷类别标签为拼音命名:`aoxian`=凹陷,`huahen`=划痕,`heidian`=黑点,`wuzi`=污渍
 
+## 许可证
+
+本项目采用 [MIT License](LICENSE) 开源。第三方库(opencv、modbus、halcon、海康 MVS SDK 等)遵循各自的原厂许可。
+
 ---
 
 <div align="center">
