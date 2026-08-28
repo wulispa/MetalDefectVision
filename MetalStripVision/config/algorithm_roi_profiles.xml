@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlgorithmROIProfiles>
+    <!-- 相机1用户集配置 -->
+    <Camera id="1">
+        <UserProfile name="默认配置" isDefault="false">
+            <ROI enabled="true">
+                <Row1>801.302</Row1>
+                <Column1>0</Column1>
+                <Row2>912.413</Row2>
+                <Column2>2048</Column2>
+            </ROI>
+            <ThresholdMin>0.8</ThresholdMin>
+            <ThresholdMax>100</ThresholdMax>
+            <ProfileImage>config/profile_images/camera1/默认配置.bmp</ProfileImage>
+        </UserProfile>
+        <UserProfile name="ME10XXCSM001XX-D" isDefault="true">
+            <ROI enabled="true">
+                <Row1>830</Row1>
+                <Column1>2235</Column1>
+                <Row2>894</Row2>
+                <Column2>2914</Column2>
+            </ROI>
+            <ThresholdMin>0.55</ThresholdMin>
+            <ThresholdMax>0.65</ThresholdMax>
+            <ProfileImage></ProfileImage>
+        </UserProfile>
+    </Camera>
+    <!-- 相机2用户集配置 -->
+    <Camera id="2">
+        <UserProfile name="默认配置" isDefault="true">
+            <ROI enabled="false">
+            </ROI>
+            <ThresholdMin>0</ThresholdMin>
+            <ThresholdMax>100</ThresholdMax>
+            <ModelName>yolo11n.pt</ModelName>
+            <ProfileImage>config/profile_images/camera2/默认配置.jpg</ProfileImage>
+        </UserProfile>
+    </Camera>
+    <!-- 相机3用户集配置 -->
+    <Camera id="3">
+        <UserProfile name="默认配置" isDefault="true">
+            <ROI enabled="false">
+            </ROI>
+            <ThresholdMin>0</ThresholdMin>
+            <ThresholdMax>100</ThresholdMax>
+            <ModelName>yolo11n.pt</ModelName>
+            <ProfileImage>config/profile_images/camera3/默认配置.jpg</ProfileImage>
+        </UserProfile>
+    </Camera>
+</AlgorithmROIProfiles>

@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MetalStripVisionClass</class>
+ <widget class="QWidget" name="MetalStripVisionClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1600</width>
+    <height>923</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1600</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>金属条缺陷检测</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    font-family: &quot;Microsoft YaHei&quot;, &quot;Segoe UI&quot;, sans-serif;
+}
+
+QPushButton {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #45475a, stop:1 #313244);
+    color: #cdd6f4;
+    border: 1px solid #585b70;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #585b70, stop:1 #45475a);
+    border: 1px solid #74c7ec;
+}
+
+QPushButton:pressed {
+    background-color: #45475a;
+    padding: 6px 14px;
+}
+
+QLineEdit, QTextEdit {
+    background-color: #313244;
+    color: #cdd6f4;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: #89b4fa;
+}
+
+QLineEdit:focus, QTextEdit:focus {
+    border: 2px solid #89b4fa;
+}
+
+QLabel {
+    color: #cdd6f4;
+}
+
+QGroupBox {
+    color: #89b4fa;
+    font-weight: bold;
+    border: 2px solid #45475a;
+    border-radius: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 15px;
+    padding: 0 8px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QWidget" name="Show_Widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">#Show_Widget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1e1e2e, stop:1 #313244);
+    border: 2px solid #585b70;
+    border-radius: 12px;
+}</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QLabel" name="Camera1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#Camera1, #Camera2, #Camera3 {
+    background-color: #11111b;
+    border: 2px solid #585b70;
+    border-radius: 10px;
+    color: #6c7086;
+    font-size: 16px;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+}</string>
+          </property>
+          <property name="text">
+           <string>相机 1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="Camera2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#Camera1, #Camera2, #Camera3 {
+    background-color: #11111b;
+    border: 2px solid #585b70;
+    border-radius: 10px;
+    color: #6c7086;
+    font-size: 16px;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+}</string>
+          </property>
+          <property name="text">
+           <string>相机 2</string>
+          </property>
+          <property name="openExternalLinks">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="Camera3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>500</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#Camera1, #Camera2, #Camera3 {
+    background-color: #11111b;
+    border: 2px solid #585b70;
+    border-radius: 10px;
+    color: #6c7086;
+    font-size: 16px;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+}</string>
+          </property>
+          <property name="text">
+           <string>相机 3</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="Tool_Widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">#Tool_Widget {
+    background-color: #181825;
+    border: 2px solid #45475a;
+    border-radius: 12px;
+}</string>
+     </property>
+     <widget class="QGroupBox" name="Detect_Group">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>110</y>
+        <width>471</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="title">
+       <string>检测结果</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Total_Label">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>18</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Label, #defective_label, #Defective_Rate_Label {
+    color: #a6e3a1;
+    font-weight: bold;
+}</string>
+           </property>
+           <property name="text">
+            <string>检测总数:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Total_Edit">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Edit, #defective_lineEdit, #Defective_Rate_Edit {
+    background-color: #1e1e2e;
+    color: #a6e3a1;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Total_Edit:focus, #defective_lineEdit:focus, #Defective_Rate_Edit:focus {
+    border: 2px solid #a6e3a1;
+    background-color: #313244;
+}</string>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="Defective_Rate_Label">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>18</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Label, #defective_label, #Defective_Rate_Label {
+    color: #f38ba8;
+    font-weight: bold;
+}</string>
+           </property>
+           <property name="text">
+            <string>次品率：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="Defective_Rate_Edit">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Edit, #defective_lineEdit, #Defective_Rate_Edit {
+    background-color: #1e1e2e;
+    color: #f38ba8;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Total_Edit:focus, #defective_lineEdit:focus, #Defective_Rate_Edit:focus {
+    border: 2px solid #f38ba8;
+    background-color: #313244;
+}</string>
+           </property>
+           <property name="text">
+            <string>0.0%</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="defective_label">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>18</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Label, #defective_label, #Defective_Rate_Label {
+    color: #fab387;
+    font-weight: bold;
+}</string>
+           </property>
+           <property name="text">
+            <string>次品数量：</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="defective_lineEdit">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#Total_Edit, #defective_lineEdit, #Defective_Rate_Edit {
+    background-color: #1e1e2e;
+    color: #fab387;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#Total_Edit:focus, #defective_lineEdit:focus, #Defective_Rate_Edit:focus {
+    border: 2px solid #fab387;
+    background-color: #313244;
+}</string>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="NG_Group">
+      <property name="geometry">
+       <rect>
+        <x>1080</x>
+        <y>110</y>
+        <width>491</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>18</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="title">
+       <string>NG记录</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>467</width>
+            <height>253</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QTextEdit" name="NG_textedit">
+             <property name="font">
+              <font>
+               <family>Consolas</family>
+               <pointsize>-1</pointsize>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#NG_textedit {
+    background-color: #1e1e2e;
+    color: #f38ba8;
+    border: 2px solid #45475a;
+    border-radius: 6px;
+    padding: 8px;
+    font-family: &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
+    font-size: 12px;
+}
+
+#NG_textedit:focus {
+    border: 2px solid #f38ba8;
+}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="System_Group">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>1550</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei</family>
+        <pointsize>12</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="title">
+       <string>系统操作</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="DetectBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#DetectBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #a6e3a1, stop:1 #94e2d5);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#DetectBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #94e2d5, stop:1 #a6e3a1);
+}
+
+#DetectBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>自动检测</string>
+         </property>
+         <property name="icon">
+          <iconset theme="media-playback-start"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="ExitBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ExitBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f38ba8, stop:1 #eba0ac);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#ExitBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #eba0ac, stop:1 #f38ba8);
+}
+
+#ExitBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>✖ 退出</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="4">
+        <widget class="QPushButton" name="ParamBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ParamBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #89b4fa, stop:1 #74c7ec);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#ParamBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #74c7ec, stop:1 #89b4fa);
+}
+
+#ParamBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>⚙ 传统参数</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="5">
+        <widget class="QPushButton" name="AIParamBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#AIParamBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #fab387, stop:1 #f9e2af);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#AIParamBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f9e2af, stop:1 #fab387);
+}
+
+#AIParamBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>AI参数</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="PressBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#PressBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #cba6f7, stop:1 #b4befe);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#PressBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #b4befe, stop:1 #cba6f7);
+}
+
+#PressBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>修改密码</string>
+         </property>
+         <property name="icon">
+          <iconset theme="document-properties"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="UnlockBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#UnlockBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f9e2af, stop:1 #fab387);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#UnlockBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #fab387, stop:1 #f9e2af);
+}
+
+#UnlockBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>🔓 解锁</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="6">
+        <widget class="QPushButton" name="DataBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#DataBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #74c7ec, stop:1 #89dceb);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#DataBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #89dceb, stop:1 #74c7ec);
+}
+
+#DataBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>📊 数据查询</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="7">
+        <widget class="QPushButton" name="ConfigManagerBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ConfigManagerBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f5c2e7, stop:1 #eba0ac);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#ConfigManagerBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #eba0ac, stop:1 #f5c2e7);
+}
+
+#ConfigManagerBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string> 配置文件</string>
+         </property>
+         <property name="icon">
+          <iconset theme="document-open"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="8">
+        <widget class="QPushButton" name="ManualCaptureBtn">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>300</width>
+           <height>80</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>20</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#ManualCaptureBtn {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #cba6f7, stop:1 #f5c2e7);
+    color: #1e1e2e;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#ManualCaptureBtn:hover {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #f5c2e7, stop:1 #cba6f7);
+}
+
+#ManualCaptureBtn:disabled {
+    background-color: #45475a;
+    color: #6c7086;
+    border: 1px solid #313244;
+}</string>
+         </property>
+         <property name="text">
+          <string>手动取图</string>
+         </property>
+         <property name="icon">
+          <iconset theme="camera-photo"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>550</width>
+        <height>300</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <widget class="QLabel" name="SystemName_Label">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>0</y>
+         <width>251</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>22</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#SystemName_Label {
+    color: #89b4fa;
+    font-weight: bold;
+}</string>
+       </property>
+       <property name="text">
+        <string>金属缺陷检测系统</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="PartNumber_Label">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>50</y>
+         <width>471</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>14</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#PartNumber_Label {
+    color: #a6e3a1;
+    font-weight: normal;
+}</string>
+       </property>
+       <property name="text">
+        <string>料号：--</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>100</y>
+         <width>501</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="Runtime_Label_2">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#Runtime_Label_2, #System_Label {
+    color: #74c7ec;
+    font-weight: bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>运行时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="Runtime_Label">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#Runtime_Label, #System_Label_2 {
+    color: #89dceb;
+    font-weight: bold;
+    background-color: #313244;
+    border-radius: 6px;
+    padding: 6px 12px;
+}</string>
+            </property>
+            <property name="text">
+             <string>00:00:00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="System_Label">
+            <property name="minimumSize">
+             <size>
+              <width>150</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#Runtime_Label_2, #System_Label {
+    color: #74c7ec;
+    font-weight: bold;
+}</string>
+            </property>
+            <property name="text">
+             <string>系统时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="System_Label_2">
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#Runtime_Label, #System_Label_2 {
+    color: #89dceb;
+    font-weight: bold;
+    background-color: #313244;
+    border-radius: 6px;
+    padding: 6px 12px;
+}</string>
+            </property>
+            <property name="text">
+             <string>00:00:00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MetalStripVision.qrc"/>
+ </resources>
+ <connections/>
+ <slots>
+  <slot>CoutingButton_click()</slot>
+ </slots>
+</ui>

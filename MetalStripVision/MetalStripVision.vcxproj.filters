@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="相机">
+      <UniqueIdentifier>{d0eef3e1-25d9-4f52-a1cd-f4785065eabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="算法">
+      <UniqueIdentifier>{94acfed4-4549-46b3-99ab-53785ff99744}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="对话框头文件">
+      <UniqueIdentifier>{289da851-6438-4fa4-b7d4-485a90a4ddd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="对话框源文件">
+      <UniqueIdentifier>{b89060f0-ced6-4282-9814-c0eca1fa5d03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="MetalStripVision.qrc">
+      <Filter>资源文件</Filter>
+    </QtRcc>
+    <QtUic Include="MetalStripVision.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="MetalStripVision.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+    <ClCompile Include="MetalStripVision.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraHK1.cpp">
+      <Filter>相机</Filter>
+    </ClCompile>
+    <ClCompile Include="logger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HalconAlgorithm.cpp">
+      <Filter>算法</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UserManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="YOLOAlgorithm.cpp">
+      <Filter>算法</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgorithmROIManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterSettingsDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EnlargedViewDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualCaptureDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AIParamConfigDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStatsDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigManagerDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangePasswordDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDialog.cpp">
+      <Filter>对话框源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectionLogDatabase.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PLC_Interface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgorithmThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IOThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UIThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DispatchThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CameraHK1.h">
+      <Filter>相机</Filter>
+    </ClInclude>
+    <ClInclude Include="publicspace.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="logger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AIAlgorithm.h">
+      <Filter>算法</Filter>
+    </ClInclude>
+    <ClInclude Include="AIDefectThreshold.h">
+      <Filter>算法</Filter>
+    </ClInclude>
+    <ClInclude Include="HalconAlgorithm.h">
+      <Filter>算法</Filter>
+    </ClInclude>
+    <ClInclude Include="IAlgorithm.h">
+      <Filter>算法</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="YOLOAlgorithm.h">
+      <Filter>算法</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmROIConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgorithmROIManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectionLogDatabase.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PLC_Interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadSafeQueue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MetalStripVision.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\camera.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitbug_favicon.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ChangePasswordDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="ConfigManagerDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="EnlargedViewDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="ManualCaptureDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="AIParamConfigDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="LoginDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="ParameterSettingsDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="DataStatsDialog.h">
+      <Filter>对话框头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="AlgorithmThread.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="CaptureThread.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="IOThread.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="UIThread.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+    <QtMoc Include="DispatchThread.h">
+      <Filter>头文件</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="DataStatsDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="LoginDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ChangePasswordDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ParameterSettingsDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="ConfigManagerDialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="utils\kernel_function.cu">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>

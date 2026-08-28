@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigManagerDialog</class>
+ <widget class="QDialog" name="ConfigManagerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>配置文件管理</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>15</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cdd6f4;
+  padding: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string>配置文件管理</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="descLabel">
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+  color: #a6adc8;
+  padding: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string>在此可以查看配置文件状态，并从模板文件夹恢复默认配置。
+格式化操作将从 config_template/ 文件夹复制默认配置覆盖当前配置。</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="configTable">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border: 2px solid #45475a;
+  border-radius: 8px;
+  gridline-color: #313244;
+  font-size: 13px;
+}
+QTableWidget::item {
+  padding: 8px;
+}
+QTableWidget::item:selected {
+  background-color: #455a64;
+  color: #cdd6f4;
+}
+QHeaderView::section {
+  background-color: #313244;
+  color: #cdd6f4;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #45475a;
+  font-weight: bold;
+}</string>
+     </property>
+     <property name="editTriggers">
+      <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+     </property>
+     <property name="columnCount">
+      <number>4</number>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>150</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>配置名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>状态</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>路径</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>描述</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <!-- 注释：格式化选中配置按钮
+     <item>
+      <widget class="QPushButton" name="formatSelectedBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: #eba0ac;
+}
+
+QPushButton:pressed {
+  background-color: #d682a0;
+}
+
+QPushButton:disabled {
+  background-color: #45475a;
+  color: #6c7086;
+}</string>
+       </property>
+       <property name="text">
+        <string>格式化选中配置</string>
+       </property>
+      </widget>
+     </item>
+     -->
+     <!-- 注释：格式化所有配置按钮
+     <item>
+      <widget class="QPushButton" name="formatAllBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #f38ba8;
+  color: #1e1e2e;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: #eba0ac;
+}
+
+QPushButton:pressed {
+  background-color: #d682a0;
+}</string>
+       </property>
+       <property name="text">
+        <string>格式化所有配置</string>
+       </property>
+      </widget>
+     </item>
+     -->
+     <item>
+      <widget class="QPushButton" name="openDirBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #89b4fa;
+  color: #1e1e2e;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: #b4befe;
+}
+
+QPushButton:pressed {
+  background-color: #74c7ec;
+}</string>
+       </property>
+       <property name="text">
+        <string>打开配置目录</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="refreshBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #a6e3a1;
+  color: #1e1e2e;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: #94e2d5;
+}
+
+QPushButton:pressed {
+  background-color: #87d8c6;
+}</string>
+       </property>
+       <property name="text">
+        <string>刷新状态</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="closeBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+  background-color: #45475a;
+  color: #cdd6f4;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+QPushButton:hover {
+  background-color: #585b70;
+}
+
+QPushButton:pressed {
+  background-color: #3c3f52;
+}</string>
+       </property>
+       <property name="text">
+        <string>关闭</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

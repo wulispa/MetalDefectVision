@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DefectColors>
+    <!-- 缺陷颜色配置文件 -->
+    <!-- classId 对应 Tag 文件中的行号（从 0 开始） -->
+    <!-- r, g, b 为 RGB 颜色值 (0-255) -->
+    <!-- name 为颜色名称（仅供参考） -->
+
+    <Color classId="0" r="255" g="0" b="0" name="Red"/>
+    <Color classId="1" r="0" g="255" b="0" name="Green"/>
+    <Color classId="2" r="0" g="0" b="255" name="Blue"/>
+    <Color classId="3" r="255" g="255" b="0" name="Yellow"/>
+    <Color classId="4" r="255" g="0" b="255" name="Magenta"/>
+    <Color classId="5" r="0" g="255" b="255" name="Cyan"/>
+    <Color classId="6" r="255" g="165" b="0" name="Orange"/>
+</DefectColors>

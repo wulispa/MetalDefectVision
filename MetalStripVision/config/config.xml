@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+ <!-- 相机配置 -->
+ <Cameras>
+  <Camera id="1">
+   <SerialNumber>CAMERA1_SN</SerialNumber>
+   <UseTraditionalAlgo>true</UseTraditionalAlgo>
+   <UseAIAlgo>false</UseAIAlgo>
+   <TriggerMode>1</TriggerMode>
+   <Enabled>true</Enabled>
+   <OriginalFormat>bmp</OriginalFormat>
+  </Camera>
+  <Camera id="2">
+   <SerialNumber>CAMERA2_SN</SerialNumber>
+   <UseTraditionalAlgo>true</UseTraditionalAlgo>
+   <UseAIAlgo>true</UseAIAlgo>
+   <TriggerMode>1</TriggerMode>
+   <Enabled>true</Enabled>
+   <OriginalFormat>tiff</OriginalFormat>
+  </Camera>
+  <Camera id="3">
+   <SerialNumber>CAMERA3_SN</SerialNumber>
+   <UseTraditionalAlgo>false</UseTraditionalAlgo>
+   <UseAIAlgo>true</UseAIAlgo>
+   <TriggerMode>1</TriggerMode>
+   <Enabled>true</Enabled>
+   <OriginalFormat>tiff</OriginalFormat>
+  </Camera>
+ </Cameras>
+
+ <!-- 图片保存配置 -->
+ <ImageSave>
+  <SavePath>D:\save_img_file/</SavePath>
+  <EnableDateFolder>true</EnableDateFolder>
+  <SaveOriginalImage>false</SaveOriginalImage>
+  <SaveDefectImage>false</SaveDefectImage>
+  <CompressDefectImage>true</CompressDefectImage>
+ </ImageSave>
+
+ <!-- 测试模式配置 -->
+ <TestMode>
+  <TestModeEnabled>true</TestModeEnabled>
+  <TestImagePath>E:\C_Project\MetalStripVision\test_img</TestImagePath>
+  <TestLoopImages>true</TestLoopImages>
+  <TestImageDelayMs>100</TestImageDelayMs>
+ </TestMode>
+
+ <!-- 系统日志配置 -->
+ <SystemLog>
+  <SystemLogEnabled>true</SystemLogEnabled>
+  <DebugLogEnabled>false</DebugLogEnabled>
+ </SystemLog>
+
+ <!-- PLC通信配置 -->
+ <PLC>
+  <PLCEnabled>true</PLCEnabled>
+  <PLCIP>192.168.1.10</PLCIP>
+  <PLCPort>502</PLCPort>
+  <PLCSlaveId>4</PLCSlaveId>
+ </PLC>
+
+ <!-- 开机自启动配置 -->
+ <AutoStart>
+  <AutoStartEnabled>false</AutoStartEnabled>
+ </AutoStart>
+
+ <!-- 用户账户配置 -->
+ <Users>
+  <User role="admin" username="admin">
+   <PasswordHash>8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918</PasswordHash>
+  </User>
+  <User role="operator" username="operator">
+   <PasswordHash>a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3</PasswordHash>
+  </User>
+ </Users>
+</Configuration>

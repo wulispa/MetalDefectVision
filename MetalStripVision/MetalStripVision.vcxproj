@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{061CD708-BE91-4318-933D-DBCF7D168176}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>6.8.3_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets;xml;sql</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>6.8.3_msvc2022_64</QtInstall>
+    <QtModules>core;gui;widgets;xml;sql</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>$(SolutionDir)MetalStripVision\include;$(SolutionDir)MetalStripVision\include\opencv2;$(SolutionDir)MetalStripVision\FromHKCam\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\TensorRT-8.6.1.6\lib;$(SolutionDir)MetalStripVision\lib\opencv2;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\lib\x64;$(SolutionDir)MetalStripVision\lib\yolo;$(LibraryPath)</LibraryPath>
+    <IntDir>$(ProjectDir)$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>$(SolutionDir)MetalStripVision\include;$(SolutionDir)MetalStripVision\include\opencv2;$(SolutionDir)MetalStripVision\FromHKCam\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\TensorRT-8.6.1.6\lib;$(SolutionDir)MetalStripVision\lib\opencv2;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\lib\x64;$(SolutionDir)MetalStripVision\lib\yolo;$(LibraryPath)</LibraryPath>
+    <IntDir>$(ProjectDir)$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\TensorRT-8.6.1.6\include;$(SolutionDir)MetalStripVision\include;$(SolutionDir)MetalStripVision\include\halcon;$(SolutionDir)MetalStripVision\include\opencv2;$(SolutionDir)MetalStripVision\include\modbus;$(SolutionDir)MetalStripVision\include\yolo_api;$(SolutionDir)MetalStripVision\include\halcon\halconcpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 /std:c++17 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>NOMINMAX;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)MetalStripVision\lib\opencv2;$(SolutionDir)MetalStripVision\FromHKCam\lib\win64;$(SolutionDir)MetalStripVision\lib\halcon\lib\x64-win64;$(SolutionDir)MetalStripVision\lib\modbus;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>modbus.lib;myAIMODELDLL.lib;opencv_world4110d.lib;MvCameraControl.lib;halcon.lib;halconcpp.lib;cuda.lib;cudart.lib;nvinfer.lib;nvinfer_plugin.lib;cudadevrt.lib</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>32</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalOptions>/utf-8 /std:c++17 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>D:\TensorRT-8.6.1.6\include;$(SolutionDir)MetalStripVision\include;$(SolutionDir)MetalStripVision\include\halcon;$(SolutionDir)MetalStripVision\include\opencv2;$(SolutionDir)MetalStripVision\include\yolo_api;$(SolutionDir)MetalStripVision\include\halcon\halconcpp;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOMINMAX;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)MetalStripVision\lib\opencv2;$(SolutionDir)MetalStripVision\FromHKCam\lib\win64;$(SolutionDir)MetalStripVision\lib\halcon\lib\x64-win64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>myAIMODELDLL.lib;opencv_world4110.lib;MvCameraControl.lib;halcon.lib;halconcpp.lib;cuda.lib;cudart.lib;nvinfer.lib;nvinfer_plugin.lib;cudadevrt.lib</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <TargetMachinePlatform>32</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AlgorithmThread.cpp" />
+    <ClCompile Include="CaptureThread.cpp" />
+    <ClCompile Include="DispatchThread.cpp" />
+    <ClCompile Include="ChangePasswordDialog.cpp" />
+    <ClCompile Include="ConfigManagerDialog.cpp" />
+    <ClCompile Include="IOThread.cpp" />
+    <ClCompile Include="LoginDialog.cpp" />
+    <ClCompile Include="UIThread.cpp" />
+    <ClCompile Include="UserManager.cpp" />
+    <ClCompile Include="YOLOAlgorithm.cpp" />
+    <QtRcc Include="MetalStripVision.qrc" />
+    <QtUic Include="ChangePasswordDialog.ui" />
+    <QtUic Include="ConfigManagerDialog.ui" />
+    <QtUic Include="DataStatsDialog.ui" />
+    <QtUic Include="LoginDialog.ui" />
+    <QtUic Include="MetalStripVision.ui" />
+    <QtUic Include="ParameterSettingsDialog.ui" />
+    <QtMoc Include="MetalStripVision.h" />
+    <ClCompile Include="CameraHK1.cpp" />
+    <ClCompile Include="ConfigManager.cpp" />
+    <ClCompile Include="DataStatsDialog.cpp" />
+    <ClCompile Include="HalconAlgorithm.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MetalStripVision.cpp" />
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="AlgorithmROIManager.cpp" />
+    <ClCompile Include="ParameterSettingsDialog.cpp" />
+    <ClCompile Include="EnlargedViewDialog.cpp" />
+    <ClCompile Include="ManualCaptureDialog.cpp" />
+    <ClCompile Include="AIParamConfigDialog.cpp" />
+    <ClCompile Include="DetectionLogDatabase.cpp" />
+    <ClCompile Include="PLC_Interface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AIAlgorithm.h" />
+    <ClInclude Include="AIDefectThreshold.h" />
+    <QtMoc Include="AlgorithmThread.h" />
+    <ClInclude Include="CameraHK1.h" />
+    <QtMoc Include="ChangePasswordDialog.h" />
+    <QtMoc Include="CaptureThread.h" />
+    <ClInclude Include="ConfigManager.h" />
+    <QtMoc Include="LoginDialog.h" />
+    <QtMoc Include="ConfigManagerDialog.h" />
+    <ClInclude Include="ImageTask.h" />
+    <QtMoc Include="IOThread.h" />
+    <ClInclude Include="ThreadSafeQueue.h" />
+    <QtMoc Include="UIThread.h" />
+    <ClInclude Include="UserManager.h" />
+    <QtMoc Include="DataStatsDialog.h" />
+    <QtMoc Include="DispatchThread.h" />
+    <ClInclude Include="HalconAlgorithm.h" />
+    <ClInclude Include="IAlgorithm.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="publicspace.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="YOLOAlgorithm.h" />
+    <ClInclude Include="AlgorithmROIConfig.h" />
+    <ClInclude Include="AlgorithmROIManager.h" />
+    <QtMoc Include="ParameterSettingsDialog.h" />
+    <QtMoc Include="EnlargedViewDialog.h" />
+    <QtMoc Include="ManualCaptureDialog.h" />
+    <QtMoc Include="AIParamConfigDialog.h" />
+    <ClInclude Include="DetectionLogDatabase.h" />
+    <ClInclude Include="PLC_Interface.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MetalStripVision.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitbug_favicon.ico" />
+    <Image Include="res\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="utils\kernel_function.cu" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.targets" />
+  </ImportGroup>
+</Project>
